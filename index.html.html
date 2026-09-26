@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW: Ultimate Driving Heritage</title>
+  <style>
+    :root {
+      --bmw-blue: #0066B1;
+      --bmw-light-blue: #00A3E0;
+      --bmw-dark: #0e0e11;
+      --bmw-card: #18181f;
+      --bmw-red: #E2231A;
+      --text-main: #f0f0f5;
+      --text-muted: #a0a0b0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bmw-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #000000 0%, #1a1a24 100%);
+      padding: 2rem;
+      border-bottom: 3px solid var(--bmw-blue);
+      text-align: center;
+    }
+
+    .badge-strip {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .strip {
+      width: 40px;
+      height: 6px;
+      border-radius: 3px;
+    }
+
+    .strip-blue { background-color: var(--bmw-light-blue); }
+    .strip-darkblue { background-color: var(--bmw-blue); }
+    .strip-red { background-color: var(--bmw-red); }
+
+    h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background-color: #121217;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #282835;
+    }
+
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--bmw-light-blue);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #ffffff;
+      border-left: 4px solid var(--bmw-blue);
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: var(--bmw-card);
+      border-radius: 8px;
+      padding: 25px;
+      border: 1px solid #282835;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--bmw-blue);
+    }
+
+    .card h3 {
+      color: var(--bmw-light-blue);
+      margin-bottom: 12px;
+    }
+
+    .timeline {
+      position: relative;
+      border-left: 2px solid var(--bmw-blue);
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    .timeline-item {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background-color: var(--bmw-blue);
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: var(--bmw-light-blue);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #08080a;
+      color: var(--text-muted);
+      border-top: 1px solid #282835;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-strip">
+      <div class="strip strip-blue"></div>
+      <div class="strip strip-darkblue"></div>
+      <div class="strip strip-red"></div>
+    </div>
+    <h1>BMW: Bavarian Motor Works</h1>
+    <p class="subtitle">The Evolution of the Ultimate Driving Machine</p>
+  </header>
+
+  <nav>
+    <a href="#origin">The Origin</a>
+    <a href="#logo">Logo Meaning</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#m-power">M Division</a>
+  </nav>
+
+  <div class="container">
+    
+    <section id="origin">
+      <h2 class="section-title">The Origins (1916)</h2>
+      <div class="card" style="margin-bottom: 40px;">
+        <p>Bayerische Motoren Werke (BMW) traces its roots back to <strong>March 7, 1916</strong>, when Rapp Motorenwerke restructured into BMW GmbH in Munich, Germany. Originally, BMW did not build cars—it built <strong>aircraft engines</strong> for World War I. Following the end of WWI and restrictions imposed by the Treaty of Versailles, BMW shifted its engineering prowess toward motorcycle engines, launching its first motorcycle, the <strong>BMW R 32</strong>, in 1923.</p>
+        <br>
+        <p>BMW officially entered the automobile industry in 1928 by purchasing the Dixi Company, producing the <strong>BMW 3/15</strong>. By the 1930s, BMW was crafting sports cars like the famous 328, establishing its reputation for performance and precision engineering.</p>
+      </div>
+    </section>
+
+    <section id="logo">
+      <h2 class="section-title">The Roundel & Logo Legend</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Bavarian Colors</h3>
+          <p>Contrary to popular belief, the blue and white quarters inside the BMW emblem are taken from the official state colors of Bavaria, Germany. However, because local law forbade using state symbols in commercial logos at the time, the colors were arranged in reverse order.</p>
+        </div>
+        <div class="card">
+          <h3>The Propeller Myth</h3>
+          <p>A 1929 BMW advertisement depicted the emblem superimposed over a rotating aircraft propeller. While BMW started as an aviation engine manufacturer, the emblem was derived from the logo of its predecessor, Rapp Motorenwerke, rather than a spinning propeller.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <h2 class="section-title">Key Historical Milestones</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">1916</span>
+          <h3>Company Founding</h3>
+          <p>Bayerische Motoren Werke is officially established in Munich, Germany.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">1923</span>
+          <h3>First BMW Motorcycle</h3>
+          <p>The BMW R 32 launches featuring a boxer engine, establishing an architectural layout BMW motorbikes use to this day.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">1928</span>
+          <h3>Automotive Era Begins</h3>
+          <p>BMW acquires Fahrzeugfabrik Eisenach and produces the BMW 3/15 DA-1.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">1962</span>
+          <h3>The "Neue Klasse" (New Class)</h3>
+          <p>The launch of the BMW 1500 saved the company financially and established the modern sports sedan category.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">1972</span>
+          <h3>BMW Motorsport GmbH</h3>
+          <p>The legendary high-performance 'M' division is founded, starting with iconic cars like the 3.0 CSL and M1.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="m-power">
+      <h2 class="section-title">BMW Motorsport (M Division)</h2>
+      <div class="card">
+        <p>Created in 1972 to facilitate BMW's racing program, <strong>BMW M</strong> became synonymous with high-performance road cars. Iconic models like the <strong>E30 M3</strong>, <strong>E39 M5</strong>, and modern M-powered cars represent the pinnacle of driver engagement and racing heritage.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>BMW Fan Showcase • Built for Enthusiasts Worldwide</p>
+  </footer>
+
+</body>
+</html>
